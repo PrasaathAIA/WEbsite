@@ -1,0 +1,816 @@
+/*
+ * AIAGENTSAGE Website Stylesheet
+ *
+ * Colour palette:
+ * --primary: deep blue (#102a43)
+ * --secondary: slate grey (#52657a)
+ * --accent: neon green (#00e676)
+ * --light: light grey (#f7fafc)
+ */
+
+/* CSS Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f8fafc;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Colour variables */
+:root {
+  --primary: #0b3d91; /* deep blue */
+  --secondary: #475569; /* slate grey */
+  --accent: #00e676; /* neon green */
+  --light: #f8fafc; /* light grey */
+  --dark: #0e1331; /* darkest blue */
+}
+
+/* Global dark text on light backgrounds */
+body {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+/* Utility classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: var(--secondary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #00c853;
+  color: var(--dark);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Hero Section */
+/* Legacy hero class replaced by hero-section above */
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+}
+
+.hero-buttons .btn {
+  margin: 0 0.5rem;
+}
+
+/* Services Section */
+.services-section {
+  background-color: #ffffff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  background-color: #f0f4f8;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.4;
+}
+
+/* About Section */
+.about-section {
+  background-color: var(--light);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 55%;
+}
+
+.about-text p {
+  margin-bottom: 1.25rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-icon {
+  font-size: 5rem;
+  color: var(--primary);
+}
+
+/* How It Works Section */
+.how-section {
+  background-color: #ffffff;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.step-item {
+  background-color: #f0f4f8;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.step-description {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.4;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--light);
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+
+.contact-section .btn {
+  align-self: flex-start;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark);
+  color: #94a3b8;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.footer-tagline {
+  color: #cbd5e1;
+  margin-top: 0.25rem;
+}
+
+.footer-nav a {
+  margin-right: 1.5rem;
+  color: #94a3b8;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.footer-social a {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  color: #94a3b8;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.footer-bottom a {
+  margin-left: 1rem;
+  color: #94a3b8;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: var(--accent);
+}
+
+/* Blog */
+.blog-hero {
+  background-color: var(--light);
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image-link img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.blog-card-title a {
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.blog-card-title a:hover {
+  color: var(--accent);
+}
+
+.blog-card-excerpt {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: auto;
+}
+
+/* Blog Post */
+.post-hero {
+  background-color: var(--light);
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.post-category {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+
+/* Post flowchart image styling */
+.post-flowchart {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 0.4rem;
+}
+
+/* CTA container for blog posts */
+.post-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.post-cta .btn {
+  padding: 0.75rem 1.75rem;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content .btn {
+  margin-top: 1rem;
+}
+
+/* Main Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--dark);
+  padding: 0.75rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav .nav-cta {
+  margin-left: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('../images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Subtle floating animation for hero content */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero-section .hero-content {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Scale and rotate icons on hover */
+.service-item:hover .service-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.business-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+}
+
+/* Update hero-subtitle spacing */
+.hero-subtitle {
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+  }
+  .services-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Blog Index */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 1rem 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.blog-card-excerpt {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.blog-card-link {
+  font-weight: 500;
+  color: var(--accent);
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+.blog-card-link:hover {
+  color: #00c853;
+}
+
+/* Post Page */
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.post-meta {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.post-content a.btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+ * Animations & subtle transitions
+ *
+ * To make the site feel more dynamic and polished we add a simple fade‑in
+ * animation to hero elements as they appear on the page and smooth
+ * transitions on form inputs. These enhancements are lightweight and
+ * maintain the professional look of the site while providing a more
+ * engaging experience.
+ */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the fade‑in animation to the hero content. Each element has a
+ * staggered delay so that the title, tagline, subtitle and buttons
+ * gracefully appear one after the other. Elements default to zero
+ * opacity until the animation runs. */
+.hero-section .hero-content > * {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-section .hero-content .hero-title {
+  animation-delay: 0.2s;
+}
+.hero-section .hero-content .hero-tagline {
+  animation-delay: 0.4s;
+}
+.hero-section .hero-content .hero-subtitle {
+  animation-delay: 0.6s;
+}
+.hero-section .hero-content .hero-buttons {
+  animation-delay: 0.8s;
+}
+
+/* Add smooth transition effects to form inputs. When a user focuses an
+ * input or textarea the border colour and box shadow animate smoothly
+ * creating a refined, modern feel. */
+.form-group input,
+.form-group textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
