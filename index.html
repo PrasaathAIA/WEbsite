@@ -197,9 +197,8 @@
           <form
             id="contactForm"
             class="contact-form"
-            action="mailto:prasaath@aiagentsage.com"
+            action="/api/contact"
             method="post"
-            enctype="text/plain"
           >
             <div class="form-group">
               <label for="name">Name</label>
@@ -226,6 +225,7 @@
               ></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
           </form>
         </div>
       </section>
