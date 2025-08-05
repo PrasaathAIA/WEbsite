@@ -193,12 +193,16 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-text {
   flex: 1 1 55%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .about-text p {
@@ -212,6 +216,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-icon {
@@ -630,10 +636,6 @@ a {
   .about-container {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-image {
-    margin-top: 1rem;
   }
 }
 
