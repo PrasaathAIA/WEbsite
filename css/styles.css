@@ -554,6 +554,7 @@ a {
 
 .main-nav .nav-cta {
   margin-left: 1rem;
+  color: var(--primary);
 }
 
 .nav-toggle {
