@@ -66,4 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.toggle('nav-open');
     });
   }
+
+  // Make entire blog cards clickable
+  document.querySelectorAll('.blog-card').forEach((card) => {
+    const link = card.querySelector('.blog-card-title');
+    if (link) {
+      card.addEventListener('click', () => {
+        window.location.href = link.getAttribute('href');
+      });
+    }
+  });
 });
