@@ -560,12 +560,13 @@ a {
   display: none;
   background: none;
   border: none;
-  color: #cbd5e1;
+  color: var(--accent);
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 1001;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-container {
     position: relative;
   }
@@ -650,7 +651,7 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .section {
     padding: 3rem 0;
   }
@@ -800,7 +801,7 @@ a {
   color: #00c853;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .blog-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
