@@ -22,8 +22,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #1f2937;
-  background-color: #f8fafc;
+  color: var(--dark);
+  background-color: var(--light);
 }
 
 img {
@@ -43,12 +43,6 @@ a {
   --accent: #00e676; /* neon green */
   --light: #f8fafc; /* light grey */
   --dark: #0e1331; /* darkest blue */
-}
-
-/* Global dark text on light backgrounds */
-body {
-  background-color: var(--light);
-  color: var(--dark);
 }
 
 /* Utility classes */
