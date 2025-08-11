@@ -270,55 +270,6 @@ a {
   line-height: 1.4;
 }
 
-/* Contact Section */
-.contact-section {
-  background-color: var(--light);
-}
-
-.contact-container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-form {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: var(--primary);
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 0.4rem;
-  font-size: 1rem;
-  font-family: inherit;
-  resize: vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
-}
-
-.contact-section .btn {
-  align-self: flex-start;
-}
-
 /* Footer */
 .footer {
   background-color: var(--dark);
@@ -898,12 +849,4 @@ a {
 }
 .hero-section .hero-content .hero-buttons {
   animation-delay: 0.8s;
-}
-
-/* Add smooth transition effects to form inputs. When a user focuses an
- * input or textarea the border colour and box shadow animate smoothly
- * creating a refined, modern feel. */
-.form-group input,
-.form-group textarea {
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }

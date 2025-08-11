@@ -1,7 +1,7 @@
 /*
  * AIAGENTSAGE Website Scripts
  *
- * Handles contact form submission (client-side) and dynamic footer year.
+ * Handles dynamic footer year and site interactions.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,52 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearSpan) {
     const currentYear = new Date().getFullYear();
     yearSpan.textContent = currentYear;
-  }
-
-  // Contact form submission handler
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const statusEl = document.getElementById('formStatus');
-      if (statusEl) {
-        statusEl.textContent = 'Sending...';
-        statusEl.className = 'form-status';
-      }
-
-      const formData = {
-        name: contactForm.name.value,
-        email: contactForm.email.value,
-        message: contactForm.message.value,
-      };
-
-      try {
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-
-        if (response.ok) {
-          if (statusEl) {
-            statusEl.textContent = 'Message sent successfully!';
-            statusEl.classList.add('success');
-          }
-          contactForm.reset();
-        } else {
-          throw new Error('Network response was not ok');
-        }
-      } catch (error) {
-        if (statusEl) {
-          statusEl.textContent = 'There was an error sending your message.';
-          statusEl.classList.add('error');
-        }
-        console.error('Error submitting form:', error);
-      }
-    });
   }
 
   // Make entire blog cards clickable
